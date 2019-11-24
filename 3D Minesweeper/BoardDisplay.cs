@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _3D_Minesweeper
 {
-    public partial class BoardDisplay : UserControl
+	public partial class BoardDisplay : UserControl
     {
         private Board _Board = null;
         public Board Board
@@ -84,8 +78,6 @@ namespace _3D_Minesweeper
             if (Board == null) return;
 
             ActionResult r = Board.Interact(Hover, e.Button);
-            if (r == ActionResult.GameOver || r == ActionResult.Victory)
-                Board.Reveal();
         }
 
         private Position Hovering()
